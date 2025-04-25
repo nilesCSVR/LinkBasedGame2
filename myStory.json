@@ -1,58 +1,159 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Don't fall asleep in the Glade",
+    "Credits": "Program base Created by Adam Smith (amsmith@ucsc.edu). Story by Aslan Gilman",
+    "InitialLocation": "Somewhere", 
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Somewhere": {
+            "Body": "You find yourself lost. <br> The trees surrounding you are dark and looming. They slowly creak as a breeze whistles through the thin, leafless branches...<br><br> Where would you like to go?<br> ",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
-                }
-            ]
-        },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "Up",
+                    "Target": "Mansion"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
-                }
-            ]
-        },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "Back",
+                    "Target": "LoggerHut"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
-                }
-            ]
-        },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
-                },
-                {
-                    "Text": "South",
+                    "Text": "That way",
                     "Target": "Beyond"
                 }
             ]
         },
+        "Mansion": {
+            "Body": "<br> Over a hill and through the trees lays a Mansion bigger than you've ever seen. <br> The sky above it is gray, the peeling paint having shelter from the sun. <br> As you come closer, you see a figure in the upstairs window. You're aware of how loud your shoes crunch on the cold dirt. <br> It doesn't stir. <br> Maybe it hasn't seen you.",
+            "Choices": [
+                {
+                    "Text": "Enter",
+                    "Target": "MansionInside"
+                },
+                {
+                    "Text": "Around",
+                    "Target": "LoggerHut"
+                }
+            ]
+        },
+        "MansionInside": {
+            "Body": "<br> The door creaks open, unlocked, swinging on crooked hinges. <br> You're faced with a set of ornate wooden stairs. From somewhere above you hear piano music, quiet and melodic. <br> Do you follow the music? ",
+            "Choices": [
+                {
+                    "Text": "Up",
+                    "Target": "MansionUp"
+                },
+                {
+                    "Text": "Through",
+                    "Target": "MansionOutside"
+                }
+            ]
+        },
+        "MansionUp": {
+            "Body": "<br> The sweet sound of the piano entices you up the stairs. You push forward, slowly placing your foot on the first step. <br> Then the next. <br> Then the next. <br> a creak sounds out below you. The music stops. <br> a Man exits a door, you meet him face to face. ",
+            "Choices": [
+                {
+                    "Text": "Ask for help",
+                    "Target": "Help"
+                },
+                {
+                    "Text": "Run",
+                    "Target": "Run"
+                }
+            ]
+        },
+        "Help": {
+            "Body": "<br> You tell the man you are lost. He invites you downstairs for tea.<br> The two of you have much to talk about.",
+            "Choices": [
+                {
+                    "Text": "The Man gives you a compass",
+                    "Target": "Home"
+                }
+            ]
+        },
+
+        "Run": {
+            "Body": "<br> You turn and book it, down the creaking stairs... <br> out the back door of the house...<br> Through a field... <br> you stop to catch your breath. <br> Something whinnies. <br> You've found yourself in stables. ",
+            "Choices": [
+                {
+                    "Text": "Make a friend",
+                    "Target": "Horse"
+                }
+            ]
+        },
+
+        "MansionOutside": {
+            "Body": "<br> out the back door of the house...<br> Through a field... <br> you stop to catch your breath. <br> Something whinnies. <br> You've found yourself in stables. ",
+            "Choices": [
+                {
+                    "Text": "Steal a Horse",
+                    "Target": "Horse"
+                }
+            ]
+        },
+
+        "Horse": {
+            "Body": "<br> A brown horse nuzzles your head ",
+            "Choices": [
+                {
+                    "Text": "Pet the horse",
+                    "Target": "Horse2"
+                }
+            ]
+        },
+        "Horse2": {
+            "Body": "<br> The horse is now your friend. You steal the horse and ride into the sunset.  "
+        },
+
+        "LoggerHut": {
+            "Body": "<br> continuining on your journey, you enter into the heavily wooded forest. <br> the sky is darker here. <br> you try not to focus on the faces forming in the trees. <br> eventually you stumble upon a logger's mill next to a stream, a water wheel lazily turning over the rushing water. <br> you begin to feel cold. You should find some shelter.",
+            "Choices": [
+                {
+                    "Text": "Enter",
+                    "Target": "LoggerHutInside"
+                }
+            ]
+        },
+
+        "LoggerHutInside": {
+            "Body": "<br> A man sharpening an axe sits by the fire. He tells you of the danger you may encounter.<br> you notice a log by your foot... in case you have to defend yourself.  <br> Do you trust him?",
+            "Choices": [
+                {
+                    "Text": "Attack",
+                    "Target": "LoggerHutAttack"
+                },
+                {
+                    "Text": "Sit by the fire",
+                    "Target": "LoggerHutStay"
+                }
+            ]
+        },
+
+
+        "LoggerHutAttack": {
+            "Body": "<br> Everything happened so fast... his blood is still on your hands. ",
+            "Choices": [
+                {
+                    "Text": "What's Next?",
+                    "Target": "Beyond"
+                }
+            ]
+        },
+
+        "LoggerHutStay": {
+            "Body": "<br> You an the man talk for hours. He leaves you with a compass to find your way home. <br> You're welcome to stay the night and leave in the morning.  ",
+            "Choices": [
+                {
+                    "Text": "Go Home",
+                    "Target": "Home"
+                }
+            ]
+        },
+
+        "Home": {
+            "Body": "<br> With the help of the compass, these directs suddenly make sense. You find your way home in time for supper. <br> What a silly thing to have been afraid. <br> ...However... you do wonder how you found yourself lost in the first place."
+        },
+
+
         "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+            "Body": "<br> You wander farther into the woods... you feel you may be lost forever..."
         }
     }
 }
